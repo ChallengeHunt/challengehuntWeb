@@ -1,0 +1,256 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <!-- Material Design fonts -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <!-- Bootstrap Material Design -->
+  <link href="css/bootstrap-material-design.css" rel="stylesheet">
+  <link href="css/ripples.min.css" rel="stylesheet">
+
+  <!-- Font Awesome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Custom CSS files -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/slider.css">
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    
+  <!-- // <script src="js/ga.js"></script> -->
+	<title>Challenge Hunt</title>
+</head>
+<body>
+
+  <!-- Main component -->
+  <div class="row bs-component">
+      
+    <div class="sideNav">
+      
+      <div class="logo">
+        
+        <img src="img/image_48.png" alt="logo">
+        <p>Challenge Hunt</p>   
+      </div>
+      <div class="middleNav">
+        
+        <ul>
+          <li class="active" href="#contests" value="Contests">CONTESTS</li>
+          <li class="unactive" href="#hackathons" value="Hackathons">HACKATHONS</li>
+          <li class="unactive" href="#hiring" value="Hiring">HIRING</li>
+          <li class="unactive" href="#datascience" value="DataScience">DATA SCIENCE</li>
+          <li class="unactive" data-toggle="modal" data-target="#optionsModal" value="Settings">SETTINGS</li>
+        </ul>
+      </div>
+      <div class="bottomNav">
+        
+        <a target="_blank" href="https://github.com/ChallengeHunt/challengehunt">
+          <svg aria-hidden="true" class="octicon octicon-mark-github" height="28" role="img" version="1.1" viewBox="0 0 16 16" width="28">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path>
+          </svg>
+        </a>
+
+        <a class="bugsClass" target="_blank" href="https://github.com/ChallengeHunt/challengehunt/issues/new">
+          Bugs/Suggestions
+        </a>
+        
+      </div>
+    </div>
+
+    <div class="restContainer">
+      
+      <div class="filterClass">
+        <ul class="nav nav-pills">
+          <li role="presentation"><p id="All">All</p></li>
+          <li role="presentation" class="active"><p id="Active">Active(Ongoing)</p></li>
+          <li role="presentation"><p id="Upcoming">Upcoming</p></li>
+        </ul>
+      </div>
+      
+      <!-- Cards Begin-->
+      <!-- Contests Cards Begins-->  
+      <div class="row cards activeCards" id="Contests">
+        <div id="Contests_Active" class="categoryCards">
+          
+          <p class="categoryName">Active Contests</p>
+        </div>
+        <div id="Contests_Upcoming" class="categoryCards">
+
+          <p class="categoryName">Upcoming Contests</p>
+        </div>
+      </div> 
+      <!-- Contests Cards Ends-->
+      <!-- Hackathons Cards Begins-->  
+      <div class="cards" id="Hackathons">
+        <div id="Hackathons_Active" class="categoryCards">
+
+          <p class="categoryName">Active Hackathons</p>
+        </div>
+        <div id="Hackathons_Upcoming" class="categoryCards">
+
+          <p class="categoryName">Upcoming Hackathons</p>
+        </div>
+      </div> 
+      <!-- Hackathons Cards Ends-->
+      <!-- Hiring Cards Begins-->  
+      <div class="cards" id="Hiring">
+        <div id="Hiring_Active" class="categoryCards">
+
+          <p class="categoryName">Active Hiring Contests</p>
+        </div>
+        <div id="Hiring_Upcoming" class="categoryCards">
+
+          <p class="categoryName">Upcoming Hiring Contests</p>
+        </div>
+      </div> 
+      <!-- Hiring Cards Ends-->
+      <!-- DataScience Cards Begins-->  
+      <div class="cards" id="DataScience">
+        <div id="DataScience_Active" class="categoryCards">
+
+          <p class="categoryName">Active DataScience Contests</p>
+        </div>
+        <div id="DataScience_Upcoming" class="categoryCards">
+          
+          <p class="categoryName">Upcoming DataScience Contests</p>
+        </div>
+      </div> 
+      <!-- DataScience Cards Ends-->
+
+    </div>  
+  </div> 
+
+  <!-- Modal Begins-->
+  <div class="modal fade" id="optionsModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Options</h4>
+        </div>
+        <div class="modal-body">
+          <div class="checkBoxes">
+            <div class="headerCheckbox">
+              <p class="checkboxHeader">Choose Your Favourites</p>
+              <i class="fa fa-heart checkboxIcon"></i>
+            </div>  
+            <div class="checkbox oddCheckbox">
+              <label>
+                <input name="hosts" value="ctftime.org" id="CftTime" type="checkbox">CftTime
+              </label>
+            </div>
+            <div class="checkbox evenCheckbox">
+              <label>
+                <input name="hosts" value="codechef.com" id="CodeChef" type="checkbox">CodeChef
+              </label>
+            </div>
+            <div class="checkbox oddCheckbox">
+              <label>
+                <input name="hosts" value="codeforces.com" id="CodeForces" type="checkbox">CodeForces
+              </label>
+            </div>
+            <div class="checkbox evenCheckbox">
+              <label>
+                <input name="hosts" value="google.com/codejam" id="CodeJam" type="checkbox">CodeJam
+              </label>
+            </div>
+            <div class="checkbox oddCheckbox">
+              <label>
+                <input name="hosts" value="facebook.com/hackercup" id="HackerCup" type="checkbox">HackerCup
+              </label>
+            </div>
+            <div class="checkbox evenCheckbox">
+              <label>
+                <input name="hosts" value="hackerearth.com" id="HackerEarth" type="checkbox">HackerEarth
+              </label>
+            </div>
+            <div class="checkbox oddCheckbox">
+              <label>
+                <input name="hosts" value="hackerrank.com" id="HackerRank" type="checkbox">HackerRank
+              </label>
+            </div>
+            <div class="checkbox evenCheckbox">
+              <label>
+                <input name="hosts" value="kaggle.com" id="Kaggle" type="checkbox">Kaggle
+              </label>
+            </div>
+            <div class="checkbox oddCheckbox">
+              <label>
+                <input name="hosts" value="spoj.com" id="Spoj" type="checkbox">Spoj
+              </label>
+            </div>
+            <div class="checkbox evenCheckbox">
+              <label>
+                <input name="hosts" value="russiancodecup.ru" id="RussianCodecup" type="checkbox">RussianCodecup
+              </label>
+            </div>
+            <div class="checkbox oddCheckbox">
+              <label>
+                <input name="hosts" value="topcoder.com" id="TopCoder" type="checkbox">TopCoder
+              </label>
+            </div>
+            <div class="checkbox evenCheckbox">
+              <label>
+                <input name="hosts" value="ipsc.ksp.sk" id="IPSC" type="checkbox">IPSC
+              </label>
+            </div>
+            <div class="checkbox oddCheckbox">
+              <label>
+                <input name="hosts" value="usaco.org" id="USACO" type="checkbox">USACO
+              </label>
+            </div>
+            <div class="checkbox evenCheckbox">
+              <label>
+                <input name="hosts" value="marathon24.com" id="Marathon24" type="checkbox">Marathon24
+              </label>
+            </div>
+          </div>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveButton">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Ends-->
+  <!-- Loader Starts-->
+  <div class="loader">
+        <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <p class="text">Loading...Please Wait....</p>
+    </div>
+    <!-- Loader Ends-->
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- <script src="js/intro.min.js"></script> -->
+<script src="js/material.min.js"></script>
+<script src="js/ripples.min.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/materialicons.min.js"></script>
+<!-- <script src="js/init.js"></script> -->
+<script src="js/helpers.js"></script>
+</body>
+</html>
