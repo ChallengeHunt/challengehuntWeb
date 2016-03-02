@@ -745,6 +745,11 @@ var challengeData = function () {
 function main (){
 	
 	$('.loader').css("display","block");	
+	$('#menu2').slicknav({
+		label: '',
+		duration: 1000
+	});
+
 	setHostData();	
 	challengeData();
 	selectedHosts();
@@ -832,6 +837,45 @@ function main (){
 		}
 		
 	});
+
+	$('.slicknav_nav li').click(function(){
+
+		if($(this).attr("value") == "Settings"){
+
+			var activeCategory = $('.activeCards').attr("id");
+			$('[value="'+activeCategory+'"]').addClass("active");
+			$('[value="Settings"]').removeClass("active");
+			$('[value="Settings"]').addClass("unactive");
+			return;
+		}
+
+		var clickedElement = $('.filterClass .active p').attr("id");
+		$('.slicknav_nav li').removeClass('active');
+		$('.slicknav_nav li').removeClass('unactive');
+		$(this).addClass('active');
+		$(this).siblings().addClass('unactive');
+
+		var category = $(this).attr("value");
+		
+		$('.cards').removeClass("activeCards");
+		$('#'+category).addClass("activeCards");	
+		$('.cards').css("display","none");
+		$('.categoryCards').css("display","none");
+		$("#"+category).css("display","block");
+
+		if(clickedElement == "Active"){
+			
+			$("#"+category+"_Active").css("display","block");
+			$("#"+category+"_Upcoming").css("display","none");
+		}
+		else{
+			
+			$("#"+category+"_Active").css("display","none");
+			$("#"+category+"_Upcoming").css("display","block");
+		}
+		
+		$('#menu2').slicknav('close');
+	});	
 
 	$(".cards").on("click", "div.cardHeader", function(){
 		var url = $(this).parent().attr("id");

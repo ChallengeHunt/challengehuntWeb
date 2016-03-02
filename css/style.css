@@ -57,7 +57,7 @@ svg:not(:root) {
 .middleNav ul{
 
   list-style: none;
-  padding-left: 20px;
+  padding-left: 6%;
 }
 
 .middleNav .unactive{
@@ -69,6 +69,11 @@ svg:not(:root) {
   display: table;
   width: auto;
   padding: 1% 4%;
+}
+
+.slicknav_menu{
+
+  display: none !important;
 }
 
 .middleNav .active{
@@ -96,6 +101,11 @@ svg:not(:root) {
 
   margin-left: 9%;
   margin-bottom: 7%;
+}
+
+.mobileMenu{
+
+  display: none !important;
 }
 
 .imageClass{
@@ -195,7 +205,7 @@ svg:not(:root) {
 
 .filterClass{
 
-  margin: 18px 0px 0px 58px;
+  margin: 18px 0px 0px 8%;
 }
 
 .filterClass li{
@@ -220,6 +230,8 @@ svg:not(:root) {
   background-color: #000;
   color: #fff;
 }
+
+
 /*----------------MainContainer Ends----------------*/
 
 /*----------------Cards Begin----------------*/
@@ -281,13 +293,13 @@ svg:not(:root) {
 
 .card:first-child{
 
-  margin:0% 5% 0% 5%;
+  margin:0% 5% 0% 8%;
 }
 
 .card{
 
   width: 36%;
-  margin: 4% 5% 0% 5%;
+  margin: 4% 5% 0% 7%;
   box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.2), 0 4px 16px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -715,14 +727,13 @@ svg:not(:root) {
 
   margin-top: 14%;
   display: flex;
+  justify-content:center;
 }
 
 .emptyCardsPic{
 
   width: 200px;
   height: 200px;
-  margin-left: 28%;
-  margin-top: -3%;
 }
 
 .emptyCardsContent{
@@ -748,72 +759,73 @@ svg:not(:root) {
 
 /*----------------EmptyCards Ends----------------*/
 
-/* Base for label styling */
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
-  position: absolute;
-  left: -9999px;
-}
-[type="checkbox"]:not(:checked) + label,
-[type="checkbox"]:checked + label {
-  position: relative;
-  padding-left: 25px;
-  cursor: pointer;
+/*----------------Media Queries Starts----------------*/
+
+@media all and (max-width: 1200px) {
+  
+  .imageClass div:nth-child(1){
+
+    display: none;
+  }
+
+  .imageClass div:nth-child(3){
+
+    display: none;
+  }
+
+  .imageClass div:nth-child(2){
+
+    margin-left: 5%;
+  }
 }
 
-/* checkbox aspect */
-[type="checkbox"]:not(:checked) + label:before,
-[type="checkbox"]:checked + label:before {
-  content: '';
-  position: absolute;
-  left:0; top: 2px;
-  width: 17px; height: 17px;
-  border: 1px solid #aaa;
-  background: #f8f8f8;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
-}
-/* checked mark aspect */
-[type="checkbox"]:not(:checked) + label:after,
-[type="checkbox"]:checked + label:after {
-  content: '✔';
-  position: absolute;
-  top: 3px; left: 4px;
-  font-size: 18px;
-  line-height: 0.8;
-  color: #09ad7e;
-  transition: all .2s;
-}
-/* checked mark aspect changes */
-[type="checkbox"]:not(:checked) + label:after {
-  opacity: 0;
-  transform: scale(0);
-}
-[type="checkbox"]:checked + label:after {
-  opacity: 1;
-  transform: scale(1);
-}
-/* disabled checkbox */
-[type="checkbox"]:disabled:not(:checked) + label:before,
-[type="checkbox"]:disabled:checked + label:before {
-  box-shadow: none;
-  border-color: #bbb;
-  background-color: #ddd;
-}
-[type="checkbox"]:disabled:checked + label:after {
-  color: #999;
-}
-[type="checkbox"]:disabled + label {
-  color: #aaa;
-}
-/* accessibility */
-[type="checkbox"]:checked:focus + label:before,
-[type="checkbox"]:not(:checked):focus + label:before {
-  border: 1px dotted blue;
+@media all and (max-width: 1150px) {
+  
+  .bottomNav{
+
+    flex-direction:column;
+  }
+
+  .bottomNav a{
+
+    margin-left: 5%;
+    margin-bottom: 1%;
+  }
 }
 
-/* hover style just for information */
-label:hover:before {
-  border: 1px solid #4778d9!important;
+@media all and (max-width: 970px) {
+  
+  .sidenav{
+
+    display: none;
+  }
+
+  .slicknav_menu{
+
+    display: block !important;
+  }
+
+  .restContainer{
+
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 10%;
+  }
 }
 
+@media all and (max-width: 800px) {
+  
+  .card , .card:first-child{
+
+    width: 360px;
+    display: block;
+    margin: 4% auto;
+  }
+
+  .card:first-child{
+
+    margin-top: 4%;
+  }
+}
+
+/*----------------Media Queries Ends----------------*/
