@@ -12,22 +12,11 @@
 /*----------------General CSS Ends----------------*/
 
 /*----------------Sidenav Starts----------------*/
-.logo{
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo p{
+.middleNav p{
 
   font-size: 20px;
   font-weight: 400;
   margin: auto;
-}
-
-.logo img{
-
-  margin: 3px 3px;
 }
 
 .sideNav{
@@ -76,10 +65,10 @@ svg:not(:root) {
   cursor: crosshair;
   font-weight: 500;
   font-size: 13px;
-  margin: 10px 0px;
+  margin: 5% 0%;
   display: table;
   width: auto;
-  padding: 3px 9px;
+  padding: 1% 4%;
 }
 
 .middleNav .active{
@@ -87,12 +76,12 @@ svg:not(:root) {
   cursor: crosshair;
   font-weight: 500;
   font-size: 13px;
-  margin: 6px 0px;
   display: table;
   width: auto;
-  padding: 3px 9px;
   background-color: black;
   color: white;
+  padding: 2% 5%;
+  margin: 3% 0%;
 }
 
 .middleNav .unactive:hover{
@@ -101,6 +90,67 @@ svg:not(:root) {
   color: white;
   transform:scaleX(1);
   transition: all .5s ease-in-out;
+}
+
+.middleNav > p{
+
+  margin-left: 9%;
+  margin-bottom: 7%;
+}
+
+.imageClass{
+
+  display: flex;
+  margin-bottom: 4%;
+}
+
+.imageClass div:nth-child(1){
+
+  width: 8%;
+  height: 14px;
+  margin: auto 0%;
+  background-color: #000;
+}
+
+.imageClass div:nth-child(1):after{
+
+  content: "";
+  position: absolute;
+  left: 6%;
+  background: #fff;
+  width: 10px;
+  border-radius: 6px;
+  height: 14px;
+}
+
+.imageClass div:nth-child(2){
+
+  width: 32%;
+}
+
+.imageClass div:nth-child(2) img{
+
+  display: block;
+  margin: auto;
+}
+
+.imageClass div:nth-child(3){
+
+  width: 60%;
+  height: 14px;
+  margin: auto 0%;
+  background-color: #000;
+}
+
+.imageClass div:nth-child(3):before{
+  
+  content: "";
+  position: absolute;
+  left: 37%;
+  background-color: #fff;
+  border-radius: 6px;
+  width: 10px;
+  height: 14px;
 }
 
 .bottomNav{

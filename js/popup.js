@@ -767,12 +767,7 @@ function main (){
 		$('.filterClass li').removeClass("active");
 		$(this).parent().addClass("active");
 		
-		if(clickedElement == "All"){
-
-			$("#"+clickedCategory+"_Active").css("display","block");
-			$("#"+clickedCategory+"_Upcoming").css("display","block");
-		}
-		else if(clickedElement == "Active"){
+		if(clickedElement == "Active"){
 
 			$("#"+clickedCategory+"_Active").css("display","block");
 			$("#"+clickedCategory+"_Upcoming").css("display","none");
@@ -830,14 +825,9 @@ function main (){
 			$("#"+category+"_Active").css("display","block");
 			$("#"+category+"_Upcoming").css("display","none");
 		}
-		else if(clickedElement == "Upcoming"){
+		else{
 			
 			$("#"+category+"_Active").css("display","none");
-			$("#"+category+"_Upcoming").css("display","block");
-		}
-		else{
-
-			$("#"+category+"_Active").css("display","block");
 			$("#"+category+"_Upcoming").css("display","block");
 		}
 		
