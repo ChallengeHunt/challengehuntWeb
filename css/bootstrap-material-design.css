@@ -833,15 +833,19 @@ fieldset[disabled] .form-group.is-focused .checkbox label {
   color: rgba(0,0,0, 0.26);
 }
 .checkbox input[type=checkbox] {
+/*
   opacity: 0;
   position: absolute;
-  margin: 0;
+*/
+/*  margin: 0;*/
+/*
   z-index: -1;
   width: 0;
   height: 0;
   overflow: hidden;
   left: 0;
   pointer-events: none;
+*/
 }
 .checkbox .checkbox-material {
   vertical-align: middle;
