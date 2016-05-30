@@ -293,7 +293,7 @@ svg:not(:root) {
 
 .card:first-child{
 
-  margin:0% 5% 0% 8%;
+  margin:0% 5% 0% 7%;
 }
 
 .card{
@@ -486,14 +486,15 @@ svg:not(:root) {
 
 .oddCheckbox{
 
-  width: 50%;
-  float: left;
-  margin-top: 10px !important;
+    width: 40%;
+    float: left;
+    margin-top: 10px !important;
+    margin-left:20px;
 } 
 
 .evenCheckbox{
 
-  width: 50%;
+  width: 40%;
   float: right;
   margin-top: 10px !important;
 } 
